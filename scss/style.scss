@@ -1,0 +1,146 @@
+@import '_colors';
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: $cream;
+	color: $dark-grayish-blue;
+}
+
+body,
+button {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.2rem;
+}
+
+.fancy-font {
+	font-family: 'Fraunces', serif;
+}
+
+.spaced-letters {
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+.card {
+	margin: 1.5em 1em;
+	background-color: $white;
+	border-radius: 1rem;
+	overflow: hidden;
+
+	&__img {
+		background-image: url('../images/image-product-mobile.jpg');
+		background-size: cover;
+		background-position: center;
+		height: 40vh;
+	}
+
+	&__body {
+		padding: 1.5em;
+	}
+
+	&__title {
+		margin: 0.2em 0;
+		line-height: 1;
+		font-size: 3rem;
+		color: $very-dark-blue;
+	}
+
+	&__text {
+		line-height: 1.6;
+	}
+
+	&__price {
+		display: flex;
+		align-items: center;
+		margin: 1.5em 0 1em;
+
+		&--actual {
+			margin-right: 0.7em;
+			color: $dark-cyan;
+			font-weight: bold;
+			font-size: 2.5rem;
+		}
+
+		&--original {
+			text-decoration: line-through;
+		}
+	}
+
+	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: bold;
+		width: 100%;
+		padding: 1em 0;
+		background-color: $dark-cyan;
+		border: 1px solid $dark-cyan;
+		color: $white;
+		border-radius: 1rem;
+		transition: background-color 0.3s;
+
+		&:hover {
+			background-color: $very-dark-cyan;
+		}
+
+		svg {
+			margin-right: 1em;
+		}
+	}
+}
+
+.attribution {
+	font-size: 1.1rem;
+	text-align: center;
+}
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 1440px) {
+	.card {
+		display: flex;
+		justify-content: center;
+		height: 60vh;
+		width: 40vw;
+
+		&__img {
+			height: 100%;
+			width: 55%;
+			background-image: url('../images/image-product-desktop.jpg');
+		}
+
+		&__body {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			width: 45%;
+			margin: 1.5em;
+		}
+
+		&__text {
+			font-size: 1.3rem;
+		}
+
+		&__price {
+			&--actual {
+				font-size: 3rem;
+			}
+		}
+	}
+}
