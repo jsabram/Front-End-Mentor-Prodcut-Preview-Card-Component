@@ -92,6 +92,7 @@ button {
 		border: 1px solid $dark-cyan;
 		color: $white;
 		border-radius: 1rem;
+		cursor: pointer;
 		transition: background-color 0.3s;
 
 		&:hover {
